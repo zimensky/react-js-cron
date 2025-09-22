@@ -332,7 +332,7 @@ export type DropdownsConfig = {
   'period'?: Pick<DropdownConfig, 'disabled' | 'readOnly' | 'allowClear'>
   'months'?: Omit<DropdownConfig, 'leadingZero'>
   'month-days'?: Omit<DropdownConfig, 'humanizeLabels' | 'humanizeValue'>
-  'week-days'?: Omit<DropdownConfig, 'leadingZero'>
+  'week-days'?: Omit<DropdownConfig, 'leadingZero'> & Pick<Unit, 'min' | 'max'>
   'hours'?: Omit<DropdownConfig, 'humanizeLabels' | 'humanizeValue'>
   'minutes'?: Omit<DropdownConfig, 'humanizeLabels' | 'humanizeValue'>
 }
@@ -379,6 +379,8 @@ export interface MonthDaysProps extends FieldProps {
 export interface WeekDaysProps extends FieldProps {
   humanizeLabels: boolean
   monthDays?: number[]
+  min?: number
+  max?: number
 }
 export interface HoursProps extends FieldProps {
   leadingZero: LeadingZero

@@ -359,6 +359,8 @@ export default function Cron(props: CronProps) {
               <WeekDays
                 value={weekDays}
                 setValue={setWeekDays}
+                min={dropdownsConfig?.['week-days']?.min}
+                max={dropdownsConfig?.['week-days']?.max}
                 locale={locale}
                 className={className}
                 humanizeLabels={

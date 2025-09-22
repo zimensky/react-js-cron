@@ -409,6 +409,8 @@ CronProps {
         }) => boolean
     }
     'week-days'?: {
+      min?: number
+      max?: number
       humanizeLabels?: boolean
       humanizeValue?: boolean
       disabled?: boolean

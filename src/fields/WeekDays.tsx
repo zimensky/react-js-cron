@@ -10,6 +10,8 @@ export default function WeekDays(props: WeekDaysProps) {
   const {
     value,
     setValue,
+    min,
+    max,
     locale,
     className,
     humanizeLabels,
@@ -87,6 +89,8 @@ export default function WeekDays(props: WeekDaysProps) {
         value={value}
         unit={{
           ...UNITS[4],
+          min: min ?? UNITS[4].min,
+          max: max ?? UNITS[4].max,
           // Allow translation of alternative labels when using "humanizeLabels"
           // Issue #3
           alt: locale.altWeekDays || DEFAULT_LOCALE_EN.altWeekDays,
